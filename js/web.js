@@ -177,3 +177,38 @@ Validator.isConfirmed = function (selector, getConfirmValue, message) {
       }
   }
 }
+
+/* CHOOSE COLOR */
+var $ = document.querySelector.bind(document)
+var $$ = document.querySelectorAll.bind(document)
+
+var colors = $$('.option-color__pro')
+        
+var colorChosen = $('.option-color__pro.option-color-selected')
+
+colors.forEach((color) => {
+    color.onclick = () => {
+        $('.option-color__pro.option-color-selected').classList.remove('option-color-selected');
+
+        color.classList.add('option-color-selected')
+    }
+})
+
+
+/* QUANTITY-PRODUCT */
+let deductBtnArr = document.getElementsByClassName('minus1');
+let addButtonArr = document.getElementsByClassName('add1');
+
+for(let deductBtn of deductBtnArr){
+    deductBtn.onclick = function(){
+        let currentInputBox = deductBtn.nextElementSibling;
+        currentInputBox.value =  currentInputBox.value - 1;
+    }
+}
+
+for(let addButton of addButtonArr){
+    addButton.onclick = () => {
+        let currentInputBox = addButton.previousElementSibling;
+        currentInputBox.value =  parseInt(currentInputBox.value) + 1;
+    }
+}

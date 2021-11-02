@@ -115,6 +115,7 @@
                 </div>
             </div>
         </div>
+        <!-- HEADER THIRD -->
         <div class="header-third">
             <div class="container">
                 <div class="row">
@@ -457,106 +458,102 @@
         </div>
     </header>
 
-    <div class="view-pro">
+    <!-- Cart -->
+    <div class="cart">
         <div class="container">
             <div class="crumb">
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
                       <li class="breadcrumb-item"><a href="./index.html">Trang chủ</a></li>
-                      <li class="breadcrumb-item active" aria-current="page">Nước Tẩy Trang Byphasse Solution Micellaire</li>
+                      <li class="breadcrumb-item active" aria-current="page">Giỏ hàng</li>
                     </ol>
-                  </nav>
+                </nav>
             </div>
             
-            <div class="row">
-                <div class="col-lg-4">
-                    <div class="view-img">
-                        <div class="view-img__pro-main">
-                            <img src="./img/viewpro1.jpg" alt="" class="img-main">
+            <div class="cart-menu">
+                <div class="row .cart-plus__item">
+                    <div class="col-lg-6">
+                        <div class="menu-product">
+                            Sản phẩm
                         </div>
-                        <div class="view-img__list">
-                            <div class="view-img__list-item act">
-                                <a href="" class="view-img__link">
+                    </div>
+                    <div class="col-lg-2">
+                        <div class="menu-product__price">
+                            Đơn giá
+                        </div>
+                    </div>
+                    <div class="col-lg-2">
+                        <div class="menu-product__quan">
+                            Số lượng
+                        </div>
+                    </div>
+                    <div class="col-lg-1">
+                        <div class="menu-product__allprice">
+                            Tổng tiền
+                        </div>
+                    </div>
+                    <div class="col-lg-1">
+                        <div class="menu-product_remove">
+                            Thao tác
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cart-plus">
+                <div class="row cart-plus__item">
+                    <div class="col-lg-6">
+                        <div class="cart-desc">
+                            <div class="form-check">
+                                <input class="form-check-cart" type="checkbox" value="" id="flexCheckDefault" style="width: 18px; height: 18px; color: #4ca214;">
+                            </div>
+            
+                            <a href="./product.html" class="cart-info">
+                                <div class="cart-info__img">
                                     <img src="./img/viewpro1.jpg" alt="">
-                                </a>
+                                </div>
+                                <div class="cart-info__text">
+                                    <p class="product-sale__item-name">Nước Tẩy Trang Byphasse Solution Micellaire</p>
+                                </div>
+                            </a>
+            
+                            <div class="cart-info__color">
+                                <div class="cart-info__color-type">
+                                    Phân loại Hàng
+                                    <i class="fas fa-sort-down"></i>
+                                </div>
+                                <div class="cart-info__chosen">Xám</div>
                             </div>
-                            <div class="view-img__list-item">
-                                <a href="" class="view-img__link">
-                                    <img src="./img/viewpro2.jpg" alt="">
-                                </a>
-                            </div>
-                            <div class="view-img__list-item">
-                                <a href="" class="view-img__link">
-                                    <img src="./img/viewpro3.jpg" alt="">
-                                </a>
-                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2">
+                        <div class="cart-price__item">
+                            <span class="product-sale__item-price-curr">44.000đ</span>
+                            <span class="product-sale__item-price-old">79.000đ</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-2">
+                        <div class="option-quantity">
+                            <button data-product={{item.product.id}} data-action="remove" id="minus" class="btn-quantity minus1 update-cart">-</button>
+                            <input type="text" class="product-quantity quantity" id="form-quantity-0" name="quantity" min="1" max="20" value="1">
+                            <button data-product={{item.product.id}} data-action="add" id="plus" class="btn-quantity add1 update-cart">+</button>
+                        </div>
+                    </div>
+                    <div class="col-lg-1">
+                        <div class="cart-info__total-price">
+                            <span>44.000đ</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-1">
+                        <div class="cart-info__delete">
+                            <button class="btn btn-danger">Xóa</button>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-5">
-                    <div class="view-info">
-                        <h4 class="view-info__title">Nước Tẩy Trang Byphasse Solution Micellaire</h2>
-                        <div class="view-rate">
-                            <div class="rating-stars">
-                                <i class="star--gold fas fa-star"></i>
-                                <i class="star--gold fas fa-star"></i>
-                                <i class="star--gold fas fa-star"></i>
-                                <i class="star--gold fas fa-star"></i>
-                                <i class=" fas fa-star"></i>
-                            </div>
-                            <div class="text-ratings">
-                                <p>
-                                    <span>4</span> sao - <span>62</span> lượt đánh giá
-                                </p>
-                            </div>
-                        </div>
-                        <div class="view-price">
-                            <div class="view-price__sale">
-                                <span class="curr-price">97,000₫</span> 
-                                <span class="old-price">130,000₫</span>
-                                <span class="percent-sale">- 40%</span>
-                            </div>
-                            <div class="view-price__note">
-                                <p>Giá thị trường: 155,000₫ - Tiết kiệm: 25,000₫ (<span>- 17%</span>)</p>
-                            </div>
-                        </div>
-                        <div class="view-info__note">
-                            <p class="view-info__text">
-                                - Nước tẩy trang Byphasse Solution Micerallaire Face chứa thành phần nước khoáng giúp tẩy sạch các chất bẩn và bã nhờn sâu trong lỗ chân lông cùng lớp trang điểm trên da.
-                            </p>
-                            <p class="view-info__text">
-                                - Giúp làn da luôn sạch thoáng, mịn màng và ngăn ngừa mụn xuất hiện.
-                            </p>
-                            <p class="view-info__text">
-                                - Hạt dầu cực nhỏ tẩy sạch và hiệu quả những vùng nhỏ trên da, không bết dính sau khi sử dụng                            </p>
-                        </div>
-                    </div>
-                    <div class="option-view">
-                        <div class="choose-color">
-                            <span>Chọn màu : </span>
-                            <div class="option-color">
-                                <button class="option-color__pro option-color-selected">Màu hồng</button>
-                                <button class="option-color__pro">Màu xám</button>
-                            </div>
-                        </div>
-                        <div class="choose-quantity">
-                            <span>Số lượng : </span>
-                            <div class="option-quantity">
-                                <button data-product={{item.product.id}} data-action="remove" id="minus" class="btn-quantity minus1 update-cart">-</button>
-                                <input type="text" class="product-quantity quantity" id="form-quantity-0" name="quantity" min="1" max="20" value="1">
-                                <button data-product={{item.product.id}} data-action="add" id="plus" class="btn-quantity add1 update-cart">+</button>
-                            </div>
-                        </div>
-                        <button class="option-add__cart">
-                            <i class="fas fa-shopping-cart"></i>
-                            <span>Thêm vào giỏ hàng</span>
-                        </button>
-                    </div>
-                </div>
-                <div class="col-lg-3"></div>
             </div>
         </div>
     </div>
+    <!-- FOOTER -->
     <div class="footer-contact">
         <div class="container">
             <div class="row">
