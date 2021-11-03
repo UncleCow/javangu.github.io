@@ -212,3 +212,53 @@ for(let addButton of addButtonArr){
         currentInputBox.value =  parseInt(currentInputBox.value) + 1;
     }
 }
+
+
+/* Change Img */
+var mainImg = document.querySelector('.img-main');
+var changeImgs = document.querySelectorAll('#img-desc1');
+var activeImg = document.querySelector('.view-img__list-item.act');
+var noActiveImgs = document.querySelectorAll('.view-img__list-item')
+
+noActiveImgs.forEach((noActiveImg) => {
+    noActiveImg.onclick = () => {
+        document.querySelector('.view-img__list-item.act').classList.remove('act');
+        noActiveImg.classList.add('act');
+    }
+})
+changeImgs.forEach((changeImg) => {
+    changeImg.onclick = () => {
+        mainImg.src = changeImg.src;
+    }
+})
+
+/* Zoom img */
+const cover = document.querySelector('.img-cover');
+cover.addEventListener("mousemove", function(e) {
+    const screenImage = document.querySelector('.view-img__pro-main');
+    const image = document.querySelector('.img-main');
+    image.style = "width: auto; height: auto; max-height: unset";
+
+    let imageWidth = image.offsetWidth;
+    let imageHeight = image.offsetHeight;
+    const screenWidth = screenImage.offsetWidth;
+    const screenHeight = screenImage.offsetHeight;
+    const spaceX = (imageWidth / 2 - screenWidth) * 2;
+    const spaceY = (imageHeight / 2 - screenHeight) * 2;
+    imageWidth = imageWidth + spaceX;
+    imageHeight = imageHeight + spaceY;
+
+    let x = e.pageX - screenImage.offsetParent?.offsetLeft - screenImage.offsetLeft;
+    let y = e.pageY - screenImage.offsetParent?.offsetTop - screenImage.offsetTop;
+
+    const positionX = (imageWidth / screenWidth / 2) * x;
+    const positionY = (imageHeight / screenHeight / 2) * y;
+
+    image.style = `left: ${-positionX}px; top: ${-positionY}px;
+    width: auto; height: auto; max-height:unset; transform:none;`;
+});
+
+cover.addEventListener("mouseleave", function(e) {
+    const image = document.querySelector('.img-main');
+    image.style = ``;
+})
