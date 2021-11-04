@@ -93,7 +93,9 @@ function Validator(options) {
                       return (values[input.name] = input.value) && values;
                   }, {});
 
-                  options.onSubmit(formValues)
+                    options.onSubmit(formValues)
+                    location.href = "index.html";
+            
               }
               // Trường hợp submit với hành vì mặc định
               else {
@@ -233,7 +235,7 @@ changeImgs.forEach((changeImg) => {
 })
 
 /* Zoom img */
-const cover = document.querySelector('.img-cover');
+/* const cover = document.querySelector('.img-cover');
 cover.addEventListener("mousemove", function(e) {
     const screenImage = document.querySelector('.view-img__pro-main');
     const image = document.querySelector('.img-main');
@@ -261,4 +263,18 @@ cover.addEventListener("mousemove", function(e) {
 cover.addEventListener("mouseleave", function(e) {
     const image = document.querySelector('.img-main');
     image.style = ``;
-})
+}) */
+
+/* RANGE */
+var elem = document.querySelector('input[type="range"]');
+
+var rangeValue = function(){
+  var newValue = elem.value;
+  var target = document.getElementById('pro-range__value');
+  target.innerHTML = newValue + "đ";
+}
+if (elem) {
+    elem.addEventListener("input", rangeValue);
+}
+
+

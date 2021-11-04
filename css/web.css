@@ -512,6 +512,62 @@
     align-items: center;
 }
 
+.pro-cotton__item {
+    min-height: 420px;
+    max-height: 100%;
+    height: 420px;
+    margin: 8px 16px;
+    border: 1px solid rgb(179, 179, 179);
+    text-align: center;
+}
+
+
+.pro-cotton__img {
+    position: relative;
+}
+
+.pro-cotton__sale {
+    font-size: .8rem;
+    padding: 6px 8px;
+    color: #fff;
+    background-color: red;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.pro-cotton__sale::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 6px;
+    background: #fff;
+    position: absolute;
+    left: -4px;
+    top: 14px;
+    z-index: 1;
+}
+
+.pro-cotton__sale::after {
+    width: 0;
+    height: 0;
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: -12px;
+    border-right: 12px solid red;
+    border-top: 15px solid transparent;
+    border-bottom: 16px solid transparent;
+}
+
+
+
+.pro-cotton__img img {
+    width: 248.5px;
+    height: 248.5px;
+}
+
 .product-norm__img a {
     display: block;
     margin: 0 auto;
@@ -522,7 +578,8 @@
     max-width: 100%;
 }
 
-.product-norm__detail {
+.product-norm__detail,
+.pro-cotton__detail {
     width: 100%;
     text-align: left;
     padding: 7px 10px;
@@ -531,13 +588,16 @@
     border-bottom: none;
 }
 
-.product-norm__detail h6 {
+.product-norm__detail h6,
+.pro-cotton__detail h6 {
+    height: 50px;
     font-weight: 400;
     font-size: 14px;
     margin: 0 0 6px;
 }
 
-.product-norm__link {
+.product-norm__link,
+.pro-cotton__link {
     height: 62px;
     overflow: hidden;
     line-height: 20px;
@@ -546,24 +606,32 @@
     transition: color 1s ease-out 100ms;
 }
 
-.product-norm__link--brand {
+.pro-cotton__brand {
+    margin: 0;
+}
+
+.product-norm__link--brand,
+.pro-cotton__link--brand {
     text-decoration: none;
     color: #74140d;
 }
 
-.product-norm__price--curr {
+.product-norm__price--curr,
+.pro-cotton__price--curr {
     color: #ff0000;
     font-weight: 500;
     font-size: 1.3rem;
     white-space: nowrap;
 }
 
-.product-norm__quantity {
+.product-norm__quantity,
+.pro-cotton__quantity {
     display: flex;
     justify-content: space-between;
 }
 
-.product-norm__quantity p {
+.product-norm__quantity p,
+.pro-cotton__quantity p {
     text-decoration: line-through;
 }
  
@@ -938,4 +1006,134 @@
 .cart-info__total-price,
 .cart-info__delete {
     text-align: center;
+}
+
+/* ProductGroup */
+.pro-cotton__range {
+    text-align: center;
+    margin: 16px 0;
+}
+
+.pro-cotton__range-ip {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 6px;
+    border-radius: 5px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    margin: 8px 0;
+}
+
+.pro-cotton__range-ip::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #04AA6D;
+    cursor: pointer;
+}
+
+#pro-range__value {
+    display: contents;
+}
+
+.pro-cotton__title {
+    width: 90%;
+    line-height: 1.6rem;
+    font-size: 1.4rem;
+    font-weight: 400;
+    padding: 8px 12px;
+    border-left: 2px solid #990000;
+    text-align: center;
+    color: #333;
+    background-color: #eeeeee;
+}
+
+.pro-menu__list {
+    list-style: none;
+}
+
+.pro-menu__item {
+    font-size: .9rem;
+    color: #317bdb;
+    padding: 0 0 16px;
+}
+
+.pro-menu__item:click .pro-menu__skin {
+    display: block;
+}
+
+.pro-menu__skin {
+    list-style: none;
+    display: none;
+}
+
+.pro-selling {
+    width: 100%;
+    padding-left: 12px;
+    margin: 0;
+    list-style: none;
+}
+
+.pro-selling li {
+    width: 100%;
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.pro-selling li:hover a {
+    color: #ab2f65;
+}
+
+.pro-selling__item {
+    width: 70px;
+    height: 70px;
+}
+
+.pro-selling__detail {
+    margin-left: 12px;
+}
+
+.pro-selling__detail a {
+    color: #333;
+    display: block;
+    text-decoration: none;
+}
+
+.pro-selling__price {
+    font-size: 1.1rem;
+}
+
+.pro-selling__sale {
+    font-size: .6rem;
+    padding: 4px;
+    color: #fff;
+    background-color: #3acaf3;
+    border-radius: 4px;
+}
+
+.pro-cotton__sort {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pro-cotton__sort span {
+    font-size: 1.2rem;
+    font-weight: 600;  
+}
+
+.pro-cotton__sort--chosen {
+    margin-left: 16px;
+}
+
+.pro-cotton__theme {
+    padding: 12px;
+    font-weight: 400;
 }
